@@ -18,8 +18,7 @@ def print_player():
                 print(col,end='')
             print('\n')
 
-def print_all():
-    #prints out all rows
+def print_all():    #prints out all rows 
     count=0  
     for row in csvData:
         count+=1
