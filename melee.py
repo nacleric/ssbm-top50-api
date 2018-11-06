@@ -1,13 +1,13 @@
 import csv
 #import json
 
-player=input('select player: ')
-csvFile = open('2018h2h.csv')
-csvReader = csv.reader(csvFile)
-csvData = list(csvReader)
+#player=input('select player: ')
 
-def print_player():
-    opponent={}
+def print_player(player):
+    csvFile = open('2018h2h.csv')
+    csvReader = csv.reader(csvFile)
+    csvData = list(csvReader) 
+    #opponent={}
     csvData[0] = list(filter(None, csvData[0]))     #filters all the empty strings
     for i in range(len(csvData[0])):                #turns data into lowercase
         csvData[0][i]=csvData[0][i].lower()
@@ -17,6 +17,7 @@ def print_player():
             for col in row:
                 print(col,end='')
             print('\n')
+    csvFile.close()
 
 def print_all():    #prints out all rows 
     count=0  
@@ -27,10 +28,8 @@ def print_all():    #prints out all rows
             print(col, end='')
         print('\n')
 
-print_player()
 
 
-csvFile.close()
 
 '''
 data = list(csvReader)
