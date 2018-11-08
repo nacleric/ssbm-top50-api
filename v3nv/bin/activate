@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/ericng/code/python_workspace/melee_api/v3nv"
+VIRTUAL_ENV="/Users/ericng/code/python_workspace/ssbm-top50-api/v3nv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

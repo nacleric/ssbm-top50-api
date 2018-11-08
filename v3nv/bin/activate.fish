@@ -29,7 +29,7 @@ end
 # unset irrelevant variables
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/Users/ericng/code/python_workspace/melee_api/v3nv"
+set -gx VIRTUAL_ENV "/Users/ericng/code/python_workspace/ssbm-top50-api/v3nv"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH

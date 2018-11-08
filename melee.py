@@ -4,22 +4,25 @@ import csv
 #player=input('select player: ')
 
 def print_player(player):
+    foo = []
     csvFile = open('2018h2h.csv')
     csvReader = csv.reader(csvFile)
     csvData = list(csvReader) 
-    #opponent={}
     csvData[0] = list(filter(None, csvData[0]))     #filters all the empty strings
-    for i in range(len(csvData[0])):                #turns data into lowercase
-        csvData[0][i]=csvData[0][i].lower()
-    print('test:',csvData[0])
-    for row in csvData:                             #iterates threw each row of csvData
+    for row in csvData[1:]:                             #iterates threw each row of csvData
         if player in row:                           #finds the selected player and prints out info
             for col in row:
-                print(col,end='')
+                #print(col,end='')
+                foo.append(col)
             print('\n')
+    return str(foo)
     csvFile.close()
 
 def print_all():    #prints out all rows 
+    csvFile = open('2018h2h.csv')
+    csvReader = csv.reader(csvFile)
+    csvData = list(csvReader) 
+    csvData[0] = list(filter(None, csvData[0]))     #filters all the empty strings
     count=0  
     for row in csvData:
         count+=1

@@ -1,5 +1,4 @@
-import csv
+import fileinput
 
-csvFile = open('2018h2h.csv')
-lower_stream = (line.lower() for line in csvFile)
-csv_reader = csv.reader(lower_stream, delimiter=' ', quotechar='"', escapechar='^')
+for line in fileinput.input("2018h2h.csv", inplace=1):
+    print(line.lower(), end='')
