@@ -11,17 +11,15 @@ def print_player(player):
     for row in csvData[1:]:                             #iterates threw each row of csvData
         if player in row:                           #finds the selected player and prints out info
             for col in row:
-                print(col,end='')
-                foo.append(col)
-            print('\n')
+                foo.append(col) #puts all values into foo
     count = 0
     for i in range(1,len(foo),2):
         if foo[i] == '': #turns empty string to 0's
             foo[i]='0'
             foo[i+1]='0'
-        print(csvData[0][count],':',foo[i],'-',foo[i+1])
+        print(csvData[0][count],':','wins-',foo[i],'losses-',foo[i+1])
         count+=1
-    return str(foo),str(csvData[0])
+    return str(foo)
     csvFile.close()
 
 print_player('mango')
