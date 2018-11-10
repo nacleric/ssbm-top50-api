@@ -11,15 +11,14 @@ def print_player(player):
     for row in csvData[1:]:                             #iterates threw each row of csvData
         if player in row:                           #finds the selected player and prints out info
             for col in row:
-                #print(col,end='')
+                print(col,end='')
                 foo.append(col)
             print('\n')
     count = 0
     for i in range(1,len(foo),2):
-        #if foo[i] == None:
-        #    foo[i] == '0'
-        #if foo[i+1] == None:
-        #    foo[i+1] == '0'
+        if foo[i] == '':
+            foo[i]='0'
+            foo[i+1]='0'
         print(csvData[0][count],':',foo[i],'-',foo[i+1])
         count+=1
     #return str(foo),str(csvData[0])
