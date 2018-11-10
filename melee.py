@@ -16,13 +16,14 @@ def print_player(player):
             print('\n')
     count = 0
     for i in range(1,len(foo),2):
-        if foo[i] == '':
+        if foo[i] == '': #turns empty string to 0's
             foo[i]='0'
             foo[i+1]='0'
         print(csvData[0][count],':',foo[i],'-',foo[i+1])
         count+=1
-    #return str(foo),str(csvData[0])
+    return str(foo),str(csvData[0])
     csvFile.close()
+
 print_player('mango')
 
 def print_all():    #prints out all rows 
