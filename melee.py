@@ -1,7 +1,6 @@
 import csv
 #import json
 
-#player=input('select player: ')
 
 def print_player(player):
     foo = []
@@ -15,8 +14,17 @@ def print_player(player):
                 #print(col,end='')
                 foo.append(col)
             print('\n')
-    return str(foo)
+    count = 0
+    for i in range(1,len(foo),2):
+        #if foo[i] == None:
+        #    foo[i] == '0'
+        #if foo[i+1] == None:
+        #    foo[i+1] == '0'
+        print(csvData[0][count],':',foo[i],'-',foo[i+1])
+        count+=1
+    #return str(foo),str(csvData[0])
     csvFile.close()
+print_player('mango')
 
 def print_all():    #prints out all rows 
     csvFile = open('2018h2h.csv')
