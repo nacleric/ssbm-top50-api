@@ -22,7 +22,6 @@ def print_player(player):
     return str(foo)
     csvFile.close()
 
-print_player('mango')
 
 def print_all():    #prints out all rows 
     csvFile = open('2018h2h.csv')
