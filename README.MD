@@ -40,7 +40,7 @@ flask run
 ### Built With
 * Flask
 
-###Future Plans 
+### Future Plans 
 Would like to support top50 placings in the future and lower the amount of manual changes
 
 
