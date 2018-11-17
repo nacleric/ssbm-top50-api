@@ -4,34 +4,38 @@ import csv
 
 def print_player(player):
     matchup_data = []
+    json = {player:{wins:5,losses:5},}
     csvFile = open('2018h2h.csv')
     csvReader = csv.reader(csvFile)
     csvData = list(csvReader) 
+
+    #csvData[0] is the list of players because it is the first row in the csv sheet
     csvData[0] = list(filter(None, csvData[0]))     #filters all the empty strings
-    for row in csvData[1:]:                             #iterates threw each row of csvData
+    for row in csvData[1:]:                         #iterates threw each row of csvData
         if player in row:                           #finds the selected player and prints out info
             for col in row:
                 matchup_data.append(col) #puts all values into matchup_data
-    count = 0
+    counter = 0 #counter is needed to iterate through the list of players
     for i in range(1,len(matchup_data),2):
         if matchup_data[i] == '': #turns empty string to 0's
-            matchup_data[i]='0'
-            matchup_data[i+1]='0'
-        print(csvData[0][count],':','wins-',matchup_data[i],'losses-',matchup_data[i+1])
-        count+=1
+            matchup_data[i] = '0'
+            matchup_data[i+1] = '0'
+        json[str(csvData[0][counter])][]
+        #print(csvData[0][counter],':','wins-',matchup_data[i],'losses-',matchup_data[i+1])
+        counter+=1
     return str(matchup_data)
     csvFile.close()
 
 
-def print_all():    #prints out all rows 
+def print_all():                                    #prints out all rows 
     csvFile = open('2018h2h.csv')
     csvReader = csv.reader(csvFile)
     csvData = list(csvReader) 
     csvData[0] = list(filter(None, csvData[0]))     #filters all the empty strings
-    count=0  
+    counter=0  
     for row in csvData:
-        count+=1
-        print('row:',count)
+        counter+=1
+        print('row:',counter)
         for col in row:
             print(col, end='')
         print('\n')
