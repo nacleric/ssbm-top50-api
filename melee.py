@@ -4,13 +4,14 @@ import csv
 
 def print_player(player):
     matchup_data = []
-    json = {player:{wins:5,losses:5},}
+    #json = {player:{wins:5,losses:5},}
     csvFile = open('2018h2h.csv')
     csvReader = csv.reader(csvFile)
     csvData = list(csvReader) 
 
     #csvData[0] is the list of players because it is the first row in the csv sheet
     csvData[0] = list(filter(None, csvData[0]))     #filters all the empty strings
+    opponents = csvData[0]
     for row in csvData[1:]:                         #iterates threw each row of csvData
         if player in row:                           #finds the selected player and prints out info
             for col in row:
@@ -20,8 +21,8 @@ def print_player(player):
         if matchup_data[i] == '': #turns empty string to 0's
             matchup_data[i] = '0'
             matchup_data[i+1] = '0'
-        json[str(csvData[0][counter])][]
-        #print(csvData[0][counter],':','wins-',matchup_data[i],'losses-',matchup_data[i+1])
+        #json[str(csvData[0][counter])][]
+        print(opponents[counter],':','wins-',matchup_data[i],'losses-',matchup_data[i+1])
         counter+=1
     return str(matchup_data)
     csvFile.close()
