@@ -22,16 +22,16 @@ Run the api
 flask run
 ```
 ### Notes
--melee.py contains the function to query the csv file
--api.py is the main flask app
--clean.py cleans tafo's data (currently only turns everything to lowercase)
--will try to decrease the amount of manual changes and add them to clean.py
+- melee.py contains the function to query the csv file
+- api.py is the main flask app
+- clean.py cleans tafo's data (currently only turns everything to lowercase)
+- will try to decrease the amount of manual changes and add them to clean.py
 
 
 ### Manual csv changes
--removed the first 2 columns that contained their past and current ranks 
--added underscores to peoples names with spaces
--removed the last columns about SET COUNT 
+- removed the first 2 columns that contained their past and current ranks 
+- added underscores to peoples names with spaces
+- removed the last columns about SET COUNT 
 
 ### Built With
 * Flask
