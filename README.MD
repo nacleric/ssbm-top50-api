@@ -14,8 +14,12 @@ pip install -r requirements.txt
 ```
 Create the env variable
 ```
-FLASK_APP=api.py
-FLASK_DEBUG=1
+export FLASK_APP=api.py
+export FLASK_DEBUG=1
+```
+Install the packages
+```
+pip install -r requirements.txt
 ```
 Run the api
 ```
