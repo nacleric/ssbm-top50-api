@@ -11,4 +11,4 @@ def get_player(player):
     return print_player(player)
 
 if __name__ == '__main__':
-        app.run(debug=True)
+    app.run(debug=True)
