@@ -17,10 +17,6 @@ Create the env variable
 export FLASK_APP=api.py
 export FLASK_DEBUG=1
 ```
-Install the packages
-```
-pip install -r requirements.txt
-```
 Run the api
 ```
 flask run
