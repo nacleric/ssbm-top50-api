@@ -3,7 +3,7 @@ import csv
 
 
 def print_player(player):
-    foo = []
+    matchup_data = []
     csvFile = open('2018h2h.csv')
     csvReader = csv.reader(csvFile)
     csvData = list(csvReader) 
@@ -11,15 +11,15 @@ def print_player(player):
     for row in csvData[1:]:                             #iterates threw each row of csvData
         if player in row:                           #finds the selected player and prints out info
             for col in row:
-                foo.append(col) #puts all values into foo
+                matchup_data.append(col) #puts all values into matchup_data
     count = 0
-    for i in range(1,len(foo),2):
-        if foo[i] == '': #turns empty string to 0's
-            foo[i]='0'
-            foo[i+1]='0'
-        print(csvData[0][count],':','wins-',foo[i],'losses-',foo[i+1])
+    for i in range(1,len(matchup_data),2):
+        if matchup_data[i] == '': #turns empty string to 0's
+            matchup_data[i]='0'
+            matchup_data[i+1]='0'
+        print(csvData[0][count],':','wins-',matchup_data[i],'losses-',matchup_data[i+1])
         count+=1
-    return str(foo)
+    return str(matchup_data)
     csvFile.close()
 
 
