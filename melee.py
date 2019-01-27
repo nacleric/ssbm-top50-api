@@ -20,8 +20,8 @@ def print_player(player):
             matchup_data[i+1] = '0'
         json[str(opponents[counter])] = {'wins': matchup_data[i],'losses': matchup_data[i+1]}
         counter += 1
-    return json
     csvFile.close()
+    return json
 
 '''
 def print_all():                                    #prints out all rows 

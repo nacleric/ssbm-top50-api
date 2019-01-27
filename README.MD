@@ -37,6 +37,4 @@ flask run
 * Flask
 
 ### Future Plans 
-Would like to support top50 placings in the future and lower the amount of manual changes
-
-
+-Just remembered that google sheets has an api, so I'll probably rewrite everything in node/js
